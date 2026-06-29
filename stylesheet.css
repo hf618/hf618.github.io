@@ -140,3 +140,168 @@ span.highlight {
     display: inline-block;
     border-radius: 10px;
 }
+
+.experience-list {
+  margin-top: 14px;
+}
+
+.experience-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.experience-item:last-child {
+  border-bottom: 0;
+}
+
+.experience-logo {
+  width: 82px;
+  min-width: 82px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.experience-logo img {
+  max-width: 82px;
+  max-height: 52px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.experience-logo-dark {
+  height: 38px;
+  margin-top: 4px;
+  border-radius: 4px;
+  background: #111111;
+}
+
+.experience-logo-dark img {
+  max-width: 72px;
+  max-height: 26px;
+}
+
+.experience-content {
+  flex: 1;
+  line-height: 1.35;
+}
+
+.experience-time {
+  float: right;
+  margin-left: 16px;
+  color: #666666;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.experience-title {
+  font-weight: 700;
+  color: #222222;
+}
+
+.experience-subtitle {
+  margin-top: 2px;
+  color: #444444;
+}
+
+.experience-advisor {
+  margin-top: 3px;
+  color: #555555;
+}
+
+@media (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  table {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: fixed;
+    min-width: 0 !important;
+  }
+
+  tbody,
+  tr {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  td {
+    box-sizing: border-box;
+    max-width: 100% !important;
+    overflow-wrap: anywhere;
+    min-width: 0;
+  }
+
+  td[style*="width:60%"],
+  td[style*="width:30%"],
+  td[width="75%"] {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  td[style*="width:30%"] {
+    text-align: center;
+  }
+
+  td[style*="width:30%"] img,
+  td[style*="width:30%"] video {
+    width: 70% !important;
+    max-width: 220px !important;
+  }
+
+  .experience-item {
+    gap: 12px;
+  }
+
+  .experience-logo {
+    width: 58px;
+    min-width: 58px;
+    height: 46px;
+  }
+
+  .experience-logo img {
+    max-width: 58px;
+    max-height: 42px;
+  }
+
+  .experience-logo-dark {
+    height: 30px;
+    margin-top: 5px;
+  }
+
+  .experience-logo-dark img {
+    max-width: 50px;
+    max-height: 18px;
+  }
+
+  .experience-time {
+    float: none;
+    display: block;
+    margin-left: 0;
+    margin-bottom: 3px;
+  }
+
+  .experience-title,
+  .experience-subtitle,
+  .experience-advisor {
+    overflow-wrap: anywhere;
+  }
+
+  p,
+  li,
+  a,
+  papertitle {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+}
