@@ -15,6 +15,7 @@
   
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="icon" type="image/png" href="images/icon.png">
+  <script src="publications.js" defer></script>
 </head>
 
 
@@ -150,7 +151,28 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
-              <p><heading>Publications and Preprints</heading></p>
+              <p id="publications"><heading>Publications and Preprints</heading></p>
+              <nav id="publication-filters" class="publication-filters" aria-label="Publication filters" hidden>
+                <div class="publication-filter-row">
+                  <span class="publication-filter-label">Filter:</span>
+                  <div class="publication-filter-options" role="group" aria-label="Publication view">
+                    <button type="button" data-pub-mode="selected" aria-pressed="true" aria-controls="publication-list" title="First- and co-first-author papers">Show selected</button>
+                    <span class="publication-filter-separator" aria-hidden="true">/</span>
+                    <button type="button" data-pub-mode="date" aria-pressed="false" aria-controls="publication-list">Show by date</button>
+                    <span class="publication-filter-separator" aria-hidden="true">/</span>
+                    <button type="button" data-pub-mode="topic" aria-pressed="false" aria-controls="publication-list">Show by topic</button>
+                  </div>
+                </div>
+                <div class="publication-filter-row">
+                  <span class="publication-filter-label">Year:</span>
+                  <div id="publication-year-links" class="publication-filter-options"></div>
+                </div>
+                <div class="publication-filter-row">
+                  <span class="publication-filter-label">Research Topics:</span>
+                  <div id="publication-topic-links" class="publication-filter-options"></div>
+                </div>
+              </nav>
+              <p id="publication-status" class="publication-status" role="status" aria-live="polite"></p>
               <p>
                 * indicates equal contribution, &dagger; indicates corresponding author
               </p>
@@ -158,11 +180,11 @@
           </tr>
         </tbody></table>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <table id="publications-table" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody id="publication-list">
           
 
 
-          <tr id="chunktrust">
+          <tr id="chunktrust" class="publication-entry" data-year="2026" data-topic="embodied" data-selected="true">
             <td style="padding:20px;width:30%;max-width:30%" align="center">
               <a href="https://hf618.github.io/ChunkTrust.github.io/" aria-label="Visit the ChunkTrust project page">
                 <video
@@ -211,7 +233,7 @@
           </tr>
 
 
-          <tr id="roboharn-evo">
+          <tr id="roboharn-evo" class="publication-entry" data-year="2026" data-topic="embodied" data-selected="true">
             <td style="padding:20px;width:30%;max-width:30%" align="center">
               <a href="https://arxiv.org/abs/2609.37583" aria-label="Read RoboHarn-Evo on arXiv">
                 <img style="width:100%;max-width:100%" src="images/roboharn-evo.jpg" alt="RoboHarn-Evo: hierarchical task and action knowledge for self-improving robotic manipulation" loading="lazy">
@@ -241,7 +263,34 @@
           </tr>
 
 
-          <tr>
+          <tr id="chainvla" class="publication-entry" data-year="2026" data-topic="embodied" data-selected="false">
+            <td style="padding:20px;width:30%;max-width:30%" align="center">
+              <a href="https://muqy1818.github.io/chainvla-web/" aria-label="Visit the ChainVLA project page">
+                <img style="width:100%;max-width:100%" src="images/chainvla.jpg" alt="ChainVLA: unifying task progress and motion continuation across policy queries" loading="lazy" width="900" height="467">
+              </a>
+            </td>
+            <td width="75%" valign="center">
+              <papertitle><strong>ChainVLA: Chaining Vision-Language-Action Queries through a Unified Execution State for Long-Horizon Manipulation</strong></papertitle>
+              <br>
+              <a href="https://yu2hi13.github.io/">Yuzhi Huang</a>*,
+              Weijue Bu*,
+              Ziyi Xiong,
+              Jie Wu,
+              <strong>Fanding Huang</strong>,
+              <a href="https://www.jiangjingyan.com/">Jingyan Jiang</a>&dagger;,
+              <a href="http://zwang.inflexionlab.org/">Zhi Wang</a>&dagger;
+              <br>
+              <em>Preprint, 2026</em>
+              <br>
+              <a href="https://muqy1818.github.io/chainvla-web/">[Project Page]</a>
+              <a href="https://arxiv.org/pdf/2608.02326">[Paper]</a>
+              <a href="https://arxiv.org/abs/2608.02326">[arXiv]</a>
+              <br>
+            </td>
+          </tr>
+
+
+          <tr id="prm-as-a-judge" class="publication-entry" data-year="2026" data-topic="embodied" data-selected="false">
             <td style="padding:20px;width:30%;max-width:30%" align="center">
               <img style="width:100%;max-width:100%" src="images/PRM-as-judge.jpg" alt="PRM-as-a-Judge OPD paradigm">
             </td>
@@ -278,7 +327,7 @@
           </tr>
 
 
-          <tr>
+          <tr id="igen" class="publication-entry" data-year="2026" data-topic="embodied" data-selected="false">
             <td style="padding:20px;width:30%;max-width:30%" align="center">
               <video
                 style="width:100%;max-width:100%"
@@ -318,7 +367,7 @@
             </td>
           </tr>
 
-          <tr>
+          <tr id="defar" class="publication-entry" data-year="2026" data-topic="generative" data-selected="true">
             <td style="padding:20px;width:30%;max-width:30%" align="center">
               <img style="width:100%;max-width:100%" src="images/defar.png" alt="DEFAR qualitative comparison">
             </td>
@@ -349,7 +398,7 @@
           </tr>
 
 
-          <tr>
+          <tr id="verl" class="publication-entry" data-year="2026" data-topic="reasoning" data-selected="true">
             <td style="padding:20px;width:30%;max-width:30%" align="center">
               <img style="width:100%;max-width:100%" src="images/VERL.png" alt="dise">
             </td>
@@ -377,7 +426,7 @@
             </td>
           </tr>
 
-          <tr>
+          <tr id="moetta" class="publication-entry" data-year="2026" data-topic="adaptation" data-selected="false">
             <td style="padding:20px;width:30%;max-width:30%" align="center">
               <img style="width:100%;max-width:100%" src="images/MoETTA.png" alt="dise">
             </td>
@@ -403,7 +452,7 @@
             </td>
           </tr>
           
-          <tr>
+          <tr id="cosmic" class="publication-entry" data-year="2025" data-topic="adaptation" data-selected="true">
             <td style="padding:20px;width:30%;max-width:30%" align="center">
               <img style="width:100%;max-width:100%" src="images/COSMIC1.png" alt="dise">
             </td>
@@ -429,7 +478,7 @@
 
 
 
-          <tr>
+          <tr id="mecon" class="publication-entry" data-year="2025" data-topic="graph" data-selected="false">
             <td style="padding:20px;width:30%;max-width:30%" align="center">
               <img style="width:100%;max-width:100%" src="images/Mecon1.png" alt="dise">
             </td>
@@ -452,7 +501,7 @@
           </tr>
 
           
-          <tr>
+          <tr id="dtbs" class="publication-entry" data-year="2023" data-topic="adaptation" data-selected="true">
             <td style="padding:20px;width:30%;max-width:30%" align="center">
               <img style="width:100%;max-width:100%" src="images/DTBS1.png" alt="dise">
             </td>
@@ -475,6 +524,8 @@
           
 
         
+         </tbody></table>
+
         <!-- </tbody></table>
 
           <div id="click">
