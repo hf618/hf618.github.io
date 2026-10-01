@@ -209,9 +209,7 @@ span.highlight {
 }
 
 .publication-filter-row {
-  display: flex;
-  align-items: baseline;
-  gap: 6px;
+  display: block;
   margin: 5px 0;
 }
 
@@ -221,11 +219,9 @@ span.highlight {
 }
 
 .publication-filter-options {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  column-gap: 4px;
-  min-width: 0;
+  display: inline;
+  /* Collapse markup whitespace; separators provide the only horizontal gap. */
+  font-size: 0;
 }
 
 .publication-filter-options button {
@@ -251,6 +247,7 @@ span.highlight {
 
 .publication-filter-options a,
 .publication-filter-options button {
+  font-size: 14px;
   white-space: nowrap;
 }
 
@@ -261,6 +258,9 @@ span.highlight {
 }
 
 .publication-filter-separator {
+  display: inline-block;
+  margin: 0 2px;
+  font-size: 14px;
   color: #999999;
 }
 
@@ -296,12 +296,6 @@ span.highlight {
 }
 
 @media (max-width: 600px) {
-  .publication-filter-row {
-    flex-wrap: wrap;
-    column-gap: 6px;
-    row-gap: 0;
-  }
-
   .publication-group > td {
     display: block;
     width: 100%;
