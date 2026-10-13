@@ -56,8 +56,10 @@
 
   function render(mode) {
     if (mode === currentMode) return;
-    const playing = papers.flatMap(paper => Array.from(paper.querySelectorAll('video')))
-      .filter(video => video.isConnected && !video.paused);
+    const videos = papers.flatMap(paper => Array.from(paper.querySelectorAll('video')));
+    // Moving a row can pause its video without restarting native autoplay.
+    // Include thumbnails that were previously hidden or had not started yet.
+    const resume = videos.filter(video => video.autoplay || (video.isConnected && !video.paused));
     const fragment = document.createDocumentFragment();
     let shown;
     if (mode === 'selected') {
@@ -81,7 +83,8 @@
     status.textContent = mode === 'selected'
       ? `${shown.length} first- and co-first-author papers.`
       : `${shown.length} papers grouped by ${mode === 'date' ? 'year' : 'research topic'}.`;
-    playing.filter(video => video.isConnected).forEach(video => {
+    videos.filter(video => !video.isConnected).forEach(video => video.pause());
+    resume.filter(video => video.isConnected).forEach(video => {
       video.play().catch(() => {});
     });
   }
