@@ -20,3 +20,7 @@ The section opener and the captured Zhipu block in `profile.html` match the HTML
 After a change, check that the built alternate has three experience entries (Tencent Hunyuan, Horizon Robotics, XYZ Embodied AI), retains the intended dates/topics, and otherwise matches the main page. The main source must keep its original experience entries. Do not add `.nojekyll`; this template relies on Jekyll.
 
 No email, CV, recommendation letter, or school routing is changed by this website variant.
+
+## Logo whitespace cropping
+
+The shared stylesheet uses `.experience-logo-crop` viewports to remove surrounding whitespace without changing the original artwork. Horizon is cropped on both pages; XYZ is cropped on the alternate. Both preserve the full emblem and text with safety padding. The viewport fits the existing 82px desktop / 58px mobile logo column. If source logo dimensions or artwork change, remeasure the crop before updating.

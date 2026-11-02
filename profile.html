@@ -22,6 +22,7 @@ Only the Industrial Experience section differs. See _maintenance/profile-variant
 {%- assign alternate_experience = experience_body
   | remove: zhipu_entry
   | replace: 'https://www.baai.ac.cn/', 'https://xyz-eai.com/en/index.html'
+  | replace: '<a href="https://xyz-eai.com/en/index.html">', '<a class="experience-logo-crop experience-logo-crop--xyz" href="https://xyz-eai.com/en/index.html">'
   | replace: 'images/baai-logo.png', 'images/xyz-embodied-ai-logo-light.png'
   | replace: 'Beijing Academy of Artificial Intelligence (BAAI)', 'XYZ Embodied AI'
 -%}
