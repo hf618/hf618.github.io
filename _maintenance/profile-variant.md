@@ -7,11 +7,11 @@ GitHub Pages' existing Jekyll build renders `profile.html` from `index.html` usi
 
 The alternate changes only the Industrial Experience section:
 1. Removes the Zhipu AI entry.
-2. Displays the BAAI entry as XYZ Embodied AI (星源智), with the official company link and logo. Dates and topic stay unchanged.
+2. Displays the BAAI entry as XYZ Embodied AI, with the official company link and logo. Dates and topic stay unchanged.
 
-The applicant authorized the alternate attribution on 2026-11-02. Company English name/link/logo were checked against https://xyz-eai.com/en/index.html and https://xyz-eai.com/static/picture/logo.svg on that date.
+The applicant authorized the alternate attribution on 2026-11-02. Company English name/link/logo were checked against https://xyz-eai.com/en/index.html and https://xyz-eai.com/en/static/picture/news/7.png on that date.
 
-The logo is the official unmodified SVG; its white lettering is displayed on a dark background.
+The logo is the official unmodified light-background PNG from the company's news page: white background, dark lettering, and blue emblem. The displayed company title is English only, per the applicant's 2026-11-02 revision.
 
 ## Maintenance
 
